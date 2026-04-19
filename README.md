@@ -1,9 +1,10 @@
 # Basic-Obstacle-Avoidance-Robot
-# Obstacle Avoidance Robot 
+
+# Obstacle Avoidance Robot
 
 An Arduino-based autonomous robot that detects obstacles using an ultrasonic sensor and avoids collisions through intelligent movement control. The robot continuously scans the path ahead, makes real-time decisions, and navigates without manual input.
 
-## 🚀 Features
+## Features
 
 * Real-time obstacle detection using HC-SR04 sensor
 * Autonomous forward, reverse, left, and right movement
@@ -11,7 +12,7 @@ An Arduino-based autonomous robot that detects obstacles using an ultrasonic sen
 * Simple and low-cost hardware design
 * Beginner-friendly robotics project
 
-## 🛠️ Components Used
+## Components Used
 
 * Arduino Uno / Nano
 * HC-SR04 Ultrasonic Sensor
@@ -21,7 +22,7 @@ An Arduino-based autonomous robot that detects obstacles using an ultrasonic sen
 * Battery Pack
 * Jumper Wires
 
-## ⚙️ How It Works
+## How It Works
 
 1. The ultrasonic sensor measures the distance in front of the robot.
 2. If the path is clear, the robot moves forward.
@@ -29,18 +30,19 @@ An Arduino-based autonomous robot that detects obstacles using an ultrasonic sen
 4. It scans alternate directions and turns toward the clearer path.
 5. The process repeats continuously for autonomous navigation.
 
-## 📂 Project Structure
+## Project Structure
 
 * `obstacle_avoidance.ino` – Main Arduino source code
 * `README.md` – Project documentation
+
 ## Code Explanation
 
 This Arduino program controls an autonomous obstacle avoidance robot using an ultrasonic sensor, servo motor, and L298N motor driver.
 
-  ### 1. Libraries Used
-  
-  * **NewPing.h** – Handles ultrasonic sensor distance measurement.
-  * **Servo.h** – Controls the servo motor rotation.
+### 1. Libraries Used
+
+* **NewPing.h** – Handles ultrasonic sensor distance measurement.
+* **Servo.h** – Controls the servo motor rotation.
 
 ### 2. Pin Definitions
 
@@ -137,22 +139,20 @@ Left motor backward + right motor forward.
 
 The robot continuously checks for obstacles. If blocked, it reverses, scans both sides, chooses the clearer route, and continues moving autonomously.
 
-
-## 🔧 Applications
+## Applications
 
 * Robotics learning projects
 * Arduino workshops
 * Basic autonomous vehicles
 * STEM demonstrations
 
-## 🔮 Future Improvements
+## Future Improvements
 
 * Bluetooth / Wi-Fi manual control
 * LiDAR or IR sensor integration
 * Path memory and mapping
 * Advanced obstacle detection algorithms
 
-## 🙌 Credits
+## Credits
 
 Implemented and customized as a hands-on robotics workshop demonstration using publicly available reference concepts for educational purposes.
-
