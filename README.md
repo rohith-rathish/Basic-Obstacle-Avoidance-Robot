@@ -4,6 +4,11 @@
 
 An Arduino-based autonomous robot that detects obstacles using an ultrasonic sensor and avoids collisions through intelligent movement control. The robot continuously scans the path ahead, makes real-time decisions, and navigates without manual input.
 
+## Project Demo
+
+[▶ Watch Obstacle Avoidance Robot Demo](./Obstacle_Avoidance_Robot.mp4)
+
+
 ## Features
 
 * Real-time obstacle detection using HC-SR04 sensor
