@@ -139,6 +139,52 @@ Left motor backward + right motor forward.
 
 The robot continuously checks for obstacles. If blocked, it reverses, scans both sides, chooses the clearer route, and continues moving autonomously.
 
+## Wiring Connections
+
+### HC-SR04 Ultrasonic Sensor → Arduino Uno
+
+| Sensor Pin | Arduino Pin |
+| ---------- | ----------- |
+| VCC        | 5V          |
+| GND        | GND         |
+| TRIG       | A1          |
+| ECHO       | A2          |
+
+### Servo Motor → Arduino Uno
+
+| Servo Wire | Arduino Pin |
+| ---------- | ----------- |
+| Signal     | D8          |
+| VCC        | 5V          |
+| GND        | GND         |
+
+### L298N Motor Driver → Arduino Uno
+
+| L298N Pin | Arduino Pin |
+| --------- | ----------- |
+| IN1       | D2          |
+| IN2       | D3          |
+| IN3       | D4          |
+| IN4       | D5          |
+
+### DC Motors → L298N
+
+| Motor       | Driver Output |
+| ----------- | ------------- |
+| Left Motor  | OUT1 & OUT2   |
+| Right Motor | OUT3 & OUT4   |
+
+### Power Supply
+
+| Connection  | Description   |
+| ----------- | ------------- |
+| Battery +   | L298N 12V     |
+| Battery -   | L298N GND     |
+| Arduino GND | Common Ground |
+
+> Ensure all grounds are connected together for proper operation.
+
+
 ## Applications
 
 * Robotics learning projects
