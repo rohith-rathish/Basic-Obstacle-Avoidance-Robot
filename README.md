@@ -8,10 +8,9 @@ An Arduino-based autonomous robot that detects obstacles using an ultrasonic sen
 
 Autonomous obstacle detection and navigation in real time.
 
-![Obstacle Avoidance Robot Demo](demo.gif)
+<img src="demo.gif" width="450"/>
 
-[▶ Watch Full Video](./demo.mp4)
-
+[▶ Watch Full Video](./Obstacle_Avoidance_Robot.mp4)
 
 ## Features
 
