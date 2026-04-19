@@ -1,5 +1,5 @@
 # Basic-Obstacle-Avoidance-Robot
-# Obstacle Avoidance Robot 🤖
+# Obstacle Avoidance Robot 
 
 An Arduino-based autonomous robot that detects obstacles using an ultrasonic sensor and avoids collisions through intelligent movement control. The robot continuously scans the path ahead, makes real-time decisions, and navigates without manual input.
 
