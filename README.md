@@ -33,6 +33,110 @@ An Arduino-based autonomous robot that detects obstacles using an ultrasonic sen
 
 * `obstacle_avoidance.ino` – Main Arduino source code
 * `README.md` – Project documentation
+## Code Explanation
+
+This Arduino program controls an autonomous obstacle avoidance robot using an ultrasonic sensor, servo motor, and L298N motor driver.
+
+  ### 1. Libraries Used
+  
+  * **NewPing.h** – Handles ultrasonic sensor distance measurement.
+  * **Servo.h** – Controls the servo motor rotation.
+
+### 2. Pin Definitions
+
+Motor pins are assigned for forward and backward movement of left and right motors:
+
+* Left Motor Forward → Pin 2
+* Left Motor Backward → Pin 3
+* Right Motor Forward → Pin 4
+* Right Motor Backward → Pin 5
+
+Ultrasonic sensor pins:
+
+* Trigger Pin → A1
+* Echo Pin → A2
+
+Servo motor is connected to Pin 8.
+
+### 3. Global Variables
+
+* `maximum_distance = 200` → Maximum sensing range in cm.
+* `distance` → Stores measured distance.
+* `goesForward` → Tracks whether robot is moving forward.
+
+### 4. setup() Function
+
+Runs once when powered on:
+
+* Sets motor pins as outputs.
+* Attaches servo motor to pin 8.
+* Centers sensor at 115°.
+* Reads initial distance values.
+
+### 5. loop() Function
+
+Runs continuously:
+
+* If obstacle is within 20 cm:
+
+  * Stop robot
+  * Move backward briefly
+  * Stop again
+  * Scan right side
+  * Scan left side
+  * Compare distances
+  * Turn toward clearer side
+
+* If no obstacle:
+
+  * Move forward.
+
+* Updates distance after every cycle.
+
+### 6. Direction Scanning Functions
+
+#### `lookRight()`
+
+Turns servo to right (50°), reads distance, then returns to center.
+
+#### `lookLeft()`
+
+Turns servo to left (170°), reads distance, then returns to center.
+
+### 7. Sensor Reading
+
+#### `readPing()`
+
+Gets distance from ultrasonic sensor.
+
+* If no object detected (`0 cm`), sets value to `250 cm`.
+
+### 8. Movement Functions
+
+#### `moveStop()`
+
+Stops all motors.
+
+#### `moveForward()`
+
+Moves both motors forward.
+
+#### `moveBackward()`
+
+Moves both motors backward.
+
+#### `turnRight()`
+
+Left motor forward + right motor backward.
+
+#### `turnLeft()`
+
+Left motor backward + right motor forward.
+
+### 9. Working Logic Summary
+
+The robot continuously checks for obstacles. If blocked, it reverses, scans both sides, chooses the clearer route, and continues moving autonomously.
+
 
 ## 🔧 Applications
 
